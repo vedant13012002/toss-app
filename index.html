@@ -1,42 +1,30 @@
-// selections: 
-const btns = document.querySelectorAll('button');
-const output = document.querySelector('.output');
-const message = document.querySelector('.message');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 
+    <h1> Toss App </h1>
 
-for(let i = 0; i<=btns.length-1; i++){
-    btns[i].addEventListener("click", ()=>performToss(btns[i]))
-}
-
-
-let userScore = 0;
-let computerScore = 0;
-function performToss(btnClicked){
-    console.log("Button clicked", btnClicked);
-    let selectedValue = btnClicked.innerText; // "Head" or "Tail
-
-    let choices = ["head", "tail"];
-    let randomIndex = parseInt(Math.random()*choices.length);// 0,1
-    let tossValue = choices[randomIndex];
-
-    console.log("Selected Value", selectedValue, "Toss Value", tossValue);
-
-    if(tossValue == selectedValue.toLowerCase()){
-        userScore = userScore + 1;
+    <div class="output">
         
-        
-    }
-    else{
-        computerScore = computerScore + 1;
-        
-    }
+    </div>
 
-    output.innerHTML = `
-    User Score: ${userScore} 
     <br>
-    Computer Score: ${computerScore}`
-   
-}
+
+    <button> Head </button>
+    <button> Tail </button>
+
+    <div class="message">
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
 
 
 
